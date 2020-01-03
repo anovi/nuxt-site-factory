@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import ResImg from '../components/ResponsiveImage.vue';
+// import YouComponent from '../components/YOUR_COMPONENT.vue';
 
 // Register Global Components
-Vue.component('ResImg', ResImg);
+// Vue.component('YouComponent', YouComponent);

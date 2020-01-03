@@ -14,32 +14,30 @@
         "onboarding:generate": "nuxt generate --config-file ./projects/onboarding/onboarding.nuxt.config.js && cp -R ./projects/onboarding/static/* build/onboarding/"
     },
     "dependencies": {
-        "@bazzite/nuxt-optimized-images": "0.2.2",
         "@nuxtjs/google-analytics": "2.2.2",
         "@nuxtjs/style-resources": "1.0.0",
         "core-js": "3.4.8",
         "cross-env": "6.0.3",
-        "imagemin-mozjpeg": "8.0.0",
-        "imagemin-pngquant": "8.0.0",
-        "imagemin-svgo": "7.0.0",
         "js-cookie": "2.2.1",
         "nuxt": "2.10.2",
-        "responsive-loader": "1.2.0",
         "setka": "0.2.0",
-        "sharp": "0.23.4",
         "stylus": "0.54.7",
         "stylus-loader": "3.0.2",
-        "vue-lazyload": "1.3.3",
-        "vue-svg-loader": "0.15.0"
+        "vue-lazyload": "1.3.3"
     },
     "devDependencies": {
+        "@bazzite/nuxt-optimized-images": "0.3.0",
         "babel-eslint": "10.0.3",
         "eslint": "6.7.2",
         "eslint-config-airbnb-base": "14.0.0",
-        "eslint-friendly-formatter": "4.0.1",
         "eslint-loader": "3.0.3",
         "eslint-plugin-import": "2.19.1",
         "eslint-plugin-vue": "6.0.1",
-        "regenerator-runtime": "0.13.3"
+        "imagemin-mozjpeg": "8.0.0",
+        "imagemin-pngquant": "8.0.0",
+        "imagemin-svgo": "7.0.0",
+        "regenerator-runtime": "0.13.3",
+        "sharp": "0.23.4",
+        "vue-svg-loader": "0.15.0"
     }
 }

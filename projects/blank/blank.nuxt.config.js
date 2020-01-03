@@ -19,6 +19,10 @@ export default Object.assign({}, commonConfig, {
             ...commonConfig.head.link,
             /* { rel: 'stylesheet', type: 'text/css', href: '//XXXXXXXXXXXXX.css' }, */
         ],
+        script: [
+            ...commonConfig.head.script,
+            /* { src: '//polyfill.io/v3/polyfill.min.js?flags=gated', async: true }, */
+        ],
     }),
 
     /*
@@ -29,6 +33,8 @@ export default Object.assign({}, commonConfig, {
     },
 
     plugins: [
+        ...commonConfig.plugins,
+        { src: '~~/plugins/global.js', ssr: true },
         { src: '~~/plugins/cookie.js', ssr: false },
     ],
 

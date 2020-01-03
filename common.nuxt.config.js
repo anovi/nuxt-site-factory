@@ -4,7 +4,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 export default {
-
     dev: (process.env.NODE_ENV !== 'production'),
 
     rootDir: __dirname,
@@ -33,6 +32,12 @@ export default {
             { src: '//polyfill.io/v3/polyfill.min.js?flags=gated', async: true },
         ],
     },
+
+    modules: [],
+
+    plugins: [
+        { src: '~~/plugins/vue-lazyload', ssr: false }
+    ],
 
     /*
      ** Customize the progress bar color
@@ -108,8 +113,11 @@ export default {
             adapter: require('./responsive-loader-adapter.js'),
         },
         mozjpeg: {
+            /* See Jpeg options https://github.com/imagemin/imagemin-mozjpeg */
             quality: 65,
         },
+        /* See PNG options https://github.com/imagemin/imagemin-pngquant */
+        /* pngquant: {} */
     },
 
 };

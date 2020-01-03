@@ -2,7 +2,18 @@
     <div>
         <h1>Добро пожаловать в пустое корыто</h1>
         <div>
-            <Logo />
+            <p>Inline SVG:</p>
+            <InlineSVG />
+
+            <p>External SVG as image:</p>
+            <img :src="require('~~/assets/img/svg/app-store-badge-en-black.svg')" />
+
+            <p>Lazy loaded and optimized image:</p>
+            <img v-lazy="require('~~/assets/img/jaanus-jagomagi-7zKHUG68E2k-unsplash.jpg')" width="184" height="184"/>
+
+            <p>Optimized PNG image:</p>
+            <img :src="require('~~/assets/img/finolog-pattern-contrast.png')" alt="">
+
         </div>
     </div>
 </template>
@@ -10,11 +21,13 @@
 
 <script>
     import { meta } from '~~/assets/meta';
-    import Logo from '~~/assets/img/logos/amocrm.svg?inline';
+
+    // Note the `?inline` query string
+    import InlineSVG from '~~/assets/img/svg/app-store-badge-en-black.svg?inline';
 
     export default {
         components: {
-            Logo
+            InlineSVG,
         },
         head: {
             title: 'MY SITE',
