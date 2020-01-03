@@ -1,23 +1,18 @@
 <template>
-    <div>
-        <div class="container">
-            <h1 v-if="error.statusCode === 404">
-                Page not found
-            </h1>
-            <h1 v-else>
-                Error occured
-            </h1>
-            <p>Something wrong happend.</p>
-            <nuxt-link to="/">Go to index page</nuxt-link>
-        </div>
-    </div>
+  <div class="container">
+    <h1 v-if="error && error.statusCode === 404">Page not found</h1>
+    <h1 v-else>An error occurred</h1>
+    <nuxt-link to="/">Home page</nuxt-link>
+  </div>
 </template>
 
 
 <script>
-
     export default {
-        props: ['error'],
+        props: {
+            error: {
+                type: Object,
+            },
+        },
     };
-
 </script>
