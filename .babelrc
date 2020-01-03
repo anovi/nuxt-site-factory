@@ -1,0 +1,20 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "forceAllTransforms": true,
+                "targets": {
+                    "browsers": [
+                        "defaults"
+                    ]
+                },
+                "loose": true,
+                "exclude": ["transform-async-to-generator", "transform-regenerator"]
+            }
+        ]
+    ],
+    "plugins": [
+    ]
+}
