@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import cookies from "js-cookie";
-import env from "~~/services/env";
+import env from "~~/utils/env";
 
 export default async ({}) => {
     if (process.env.NODE_ENV !== 'production') {

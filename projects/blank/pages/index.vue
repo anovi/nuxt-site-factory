@@ -20,7 +20,7 @@
 
 
 <script>
-    import { meta } from '~~/assets/meta';
+    import { meta } from '~~/utils/meta';
 
     // Note the `?inline` query string
     import InlineSVG from '~~/assets/img/svg/app-store-badge-en-black.svg?inline';

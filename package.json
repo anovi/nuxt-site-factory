@@ -5,13 +5,10 @@
     "author": "Novichkov <novichkov.alexey@gmail.com>",
     "private": true,
     "scripts": {
-        "blank:dev": "cross-env BASE_URL=finolog.awe nuxt --config-file ./projects/blank/blank.nuxt.config.js",
-        "www:dev": "cross-env BASE_URL=finolog.awe nuxt --config-file ./projects/www/www.nuxt.config.js",
-        "www:generate": "nuxt generate --config-file ./projects/www/www.nuxt.config.js && cp -R ./projects/www/static/* build/www/",
-        "ico:dev": "nuxt --config-file ./projects/ico/ico.nuxt.config.js",
-        "ico:generate": "nuxt generate --config-file ./projects/ico/ico.nuxt.config.js && cp -R ./projects/ico/static/* build/ico/",
-        "onboarding:dev": "nuxt --config-file ./projects/onboarding/onboarding.nuxt.config.js",
-        "onboarding:generate": "nuxt generate --config-file ./projects/onboarding/onboarding.nuxt.config.js && cp -R ./projects/onboarding/static/* build/onboarding/"
+        "start": "npm run dev",
+        "dev": "cross-env BASE_URL=finolog.awe nuxt --config-file ./projects/$PR/$PR.nuxt.config.js",
+        "generate": "nuxt generate --config-file ./projects/$PR/$PR.nuxt.config.js && cp -R ./projects/$PR/static/* build/$PR/",
+        "create": "ncp projects/blank projects/$PR"
     },
     "dependencies": {
         "@nuxtjs/google-analytics": "2.2.2",
@@ -36,6 +33,7 @@
         "imagemin-mozjpeg": "8.0.0",
         "imagemin-pngquant": "8.0.0",
         "imagemin-svgo": "7.0.0",
+        "ncp": "2.0.0",
         "regenerator-runtime": "0.13.3",
         "sharp": "0.23.4",
         "vue-svg-loader": "0.15.0"
