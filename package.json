@@ -8,7 +8,7 @@
         "start": "npm run dev",
         "dev": "cross-env BASE_URL=finolog.awe nuxt --config-file ./projects/$PR/$PR.nuxt.config.js",
         "generate": "nuxt generate --config-file ./projects/$PR/$PR.nuxt.config.js && cp -R ./projects/$PR/static/* build/$PR/",
-        "create": "ncp projects/blank projects/$PR"
+        "create": "ncp project_template projects/$PR && mv projects/$PR/_.nuxt.config.js projects/$PR/$PR.nuxt.config.js"
     },
     "dependencies": {
         "@nuxtjs/google-analytics": "2.2.2",

@@ -110,7 +110,7 @@ export default {
             sizes: ['300', '576', '768', '992', '1200', '1920'],
             placeholder: false,
             quality: 65,
-            adapter: require('./responsive-loader-adapter.js'),
+            adapter: require('./utils/responsive-loader-adapter.js'),
         },
         mozjpeg: {
             /* See Jpeg options https://github.com/imagemin/imagemin-mozjpeg */

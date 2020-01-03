@@ -17,11 +17,11 @@ export default Object.assign({}, commonConfig, {
         titleTemplate: null,
         link: [
             ...commonConfig.head.link,
-            /* { rel: 'stylesheet', type: 'text/css', href: '//XXXXXXXXXXXXX.css' }, */
+            /* { rel: 'stylesheet', type: 'text/css', href: '//XXXXXXXXXXXXX' }, */
         ],
         script: [
             ...commonConfig.head.script,
-            /* { src: '//polyfill.io/v3/polyfill.min.js?flags=gated', async: true }, */
+            /* { src: '//XXXXXXXXXXXXX', async: true }, */
         ],
     }),
 
@@ -49,7 +49,6 @@ export default Object.assign({}, commonConfig, {
             id: 'XXXXXXXXXXXXX',
             webvisor: true,
             clickmap: true,
-            // useCDN:false,
             trackLinks: true,
             accurateTrackBounce: true,
         }], */
